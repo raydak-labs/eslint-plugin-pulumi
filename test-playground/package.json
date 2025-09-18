@@ -1,0 +1,23 @@
+{
+  "name": "test-playground",
+  "version": "1.0.0",
+  "description": "Example repository deonstrating the usage of @raydak/eslint-plugin-pulumi",
+  "private": true,
+  "type": "module",
+  "main": "src/index.ts",
+  "scripts": {
+    "lint": "eslint --ext .ts"
+  },
+  "dependencies": {
+    "@pulumi/aws": "7.7.0",
+    "@pulumi/pulumi": "3.197.0"
+  },
+  "devDependencies": {
+    "@pulumi/eslint-plugin": "0.3.1",
+    "@raydak/eslint-plugin-pulumi": "workspace:*",
+    "@tsconfig/node-lts": "22.0.2",
+    "eslint": "9.36.0",
+    "typescript": "5.9.2",
+    "typescript-eslint": "8.44.0"
+  }
+}

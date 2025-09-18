@@ -1,0 +1,54 @@
+{
+  "name": "@raydak/eslint-plugin-pulumi",
+  "version": "0.1.0",
+  "description": "ESLint plugin with useful rules for Pulumi code.",
+  "type": "module",
+  "scripts": {
+    "build": "tsdown",
+    "lint": "eslint",
+    "test": "vitest"
+  },
+  "author": "raydak",
+  "license": "MIT",
+  "dependencies": {
+    "@typescript-eslint/utils": "8.44.0"
+  },
+  "peerDependencies": {
+    "eslint": ">=9.0.0",
+    "typescript": ">=5.0.0"
+  },
+  "devDependencies": {
+    "@eslint/js": "9.36.0",
+    "@pulumi/pulumi": "3.197.0",
+    "@tsconfig/node-lts": "22.0.2",
+    "@types/node": "24.5.2",
+    "@typescript-eslint/rule-tester": "8.44.0",
+    "eslint-plugin-eslint-plugin": "7.0.0",
+    "eslint-plugin-n": "17.23.1",
+    "tsdown": "0.15.4",
+    "typescript-eslint": "8.44.0",
+    "vitest": "3.2.4"
+  },
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/index.js"
+      },
+      "require": {
+        "types": "./dist/index.d.cts",
+        "default": "./dist/index.cjs"
+      }
+    }
+  },
+  "keywords": [
+    "eslint",
+    "eslintplugin",
+    "infrastructure",
+    "lint",
+    "pulumi"
+  ]
+}
