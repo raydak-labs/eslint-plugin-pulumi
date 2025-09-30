@@ -1,0 +1,37 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  ci:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+
+      - uses: pnpm/action-setup@v2
+        with:
+          version: latest
+
+      - uses: actions/setup-node@v5
+        with:
+          node-version: lts/*
+
+      - run: pnpm install --frozen-lockfile
+
+      - name: Lint (plugin)
+        run: pnpm --filter eslint-plugin-pulumi lint
+
+      - name: Test (plugin)
+        run: pnpm --filter eslint-plugin-pulumi test
+
+      - name: Build (plugin)
+        run: pnpm --filter eslint-plugin-pulumi build
+
+      - name: Lint (test-playground)
+        # TODO: improve this
+        run: |
+          pnpm --filter test-playground lint || true

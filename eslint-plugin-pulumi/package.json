@@ -11,7 +11,7 @@
   "author": "raydak",
   "license": "MIT",
   "dependencies": {
-    "@typescript-eslint/utils": "8.44.0"
+    "@typescript-eslint/utils": "8.45.0"
   },
   "peerDependencies": {
     "eslint": ">=9.0.0",
@@ -19,14 +19,14 @@
   },
   "devDependencies": {
     "@eslint/js": "9.36.0",
-    "@pulumi/pulumi": "3.197.0",
+    "@pulumi/pulumi": "3.198.0",
     "@tsconfig/node-lts": "22.0.2",
-    "@types/node": "24.5.2",
-    "@typescript-eslint/rule-tester": "8.44.0",
+    "@types/node": "24.6.0",
+    "@typescript-eslint/rule-tester": "8.45.0",
     "eslint-plugin-eslint-plugin": "7.0.0",
     "eslint-plugin-n": "17.23.1",
-    "tsdown": "0.15.4",
-    "typescript-eslint": "8.44.0",
+    "tsdown": "0.15.5",
+    "typescript-eslint": "8.45.0",
     "vitest": "3.2.4"
   },
   "main": "./dist/index.cjs",
