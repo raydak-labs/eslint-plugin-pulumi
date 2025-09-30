@@ -1,0 +1,33 @@
+name: Release
+
+on:
+  push:
+    branches: [main]
+    # semantic-release will detect tags automatically
+    tags:
+      - "v*.*.*"
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+
+      - uses: pnpm/action-setup@v2
+        with:
+          version: latest
+
+      - uses: actions/setup-node@v5
+        with:
+          node-version: lts/*
+
+      - run: pnpm install --frozen-lockfile
+
+      - name: Build plugin
+        run: pnpm --filter eslint-plugin-pulumi build
+
+      - name: Semantic Release
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+        run: pnpx semantic-release
