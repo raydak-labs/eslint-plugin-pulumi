@@ -4,19 +4,6 @@ ESLint plugin for Pulumi projects using TypeScript to enforce best practices and
 
 This repository is derived from [pulumi/eslint-plugin-pulumi](https://github.com/pulumi/eslint-plugin-pulumi) which is not really maintained.
 
-## TODO
-
-- CHANGELOG
-- CICD
-  - publish
-  - test
-  - build
-  - test playground
-  - check types <https://github.com/arethetypeswrong/arethetypeswrong.github.io/blob/main/docs/problems/FalseExportDefault.md>
-  - e2e-Tests in test-playground folder
-- setup renovate
-- setup release automation
-
 ## Differences to `pulumi/eslint-plugin-pulumi`
 
 - this plugin is in active development
