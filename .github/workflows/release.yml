@@ -7,6 +7,10 @@ on:
     tags:
       - "v*.*.*"
 
+permissions:
+  id-token: write # required for trusted publishing to NPM, see https://docs.npmjs.com/trusted-publishers
+  contents: write # required for creating releases and tags
+
 jobs:
   release:
     runs-on: ubuntu-latest
@@ -22,6 +26,7 @@ jobs:
         with:
           cache: pnpm
           node-version: lts/*
+          registry-url: "https://registry.npmjs.org"
 
       - run: pnpm install --frozen-lockfile
 
@@ -31,5 +36,4 @@ jobs:
       - name: Semantic Release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
         run: pnpx semantic-release
