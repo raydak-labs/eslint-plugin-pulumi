@@ -1,29 +1,30 @@
 {
-  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "extends": [
+  $schema: "https://docs.renovatebot.com/renovate-schema.json",
+  extends: [
     "config:recommended",
     "helpers:pinGitHubActionDigests",
     "schedule:monthly",
     ":prConcurrentLimitNone",
-    ":prHourlyLimitNone"
+    ":prHourlyLimitNone",
   ],
-  "labels": ["dependencies"],
-  "packageRules": [
+  labels: ["dependencies"],
+  packageRules: [
     {
-      "groupName": "devDependencies (non-major)",
-      "groupSlug": "dev-dependencies-non-major",
-      "matchDepTypes": ["devDependencies"],
-      "matchUpdateTypes": ["patch", "minor"]
+      groupName: "devDependencies (non-major)",
+      groupSlug: "dev-dependencies-non-major",
+      matchDepTypes: ["devDependencies"],
+      matchUpdateTypes: ["patch", "minor"],
     },
     {
-      "groupName": "dependencies (non-major)",
-      "groupSlug": "dependencies-non-major",
-      "matchDepTypes": ["dependencies"],
-      "matchUpdateTypes": ["patch", "minor"]
+      groupName: "dependencies (non-major)",
+      groupSlug: "dependencies-non-major",
+      matchDepTypes: ["dependencies"],
+      matchUpdateTypes: ["patch", "minor"],
     },
     {
-      "matchDepTypes": ["dependencies"],
-      "semanticCommitType": "refactor"
-    }
-  ]
+      matchDepTypes: ["dependencies"],
+      semanticCommitType: "refactor",
+    },
+  ],
+  minimumReleaseAge: "7 days",
 }
