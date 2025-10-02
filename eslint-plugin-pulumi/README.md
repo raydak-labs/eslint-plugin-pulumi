@@ -8,7 +8,7 @@ ESLint plugin for Pulumi projects using TypeScript to enforce best practices and
 
 This repository is derived from [pulumi/eslint-plugin-pulumi](https://github.com/pulumi/eslint-plugin-pulumi) which is not really maintained.
 
-## Differences to `pulumi/eslint-plugin-pulumi`
+## Differences to [pulumi/eslint-plugin-pulumi](https://github.com/pulumi/eslint-plugin-pulumi)
 
 - this plugin is in active development
 - lints bad usages of `OutputInstance`s correctly (see below)
@@ -42,12 +42,12 @@ Configure ESLint by adding an `eslint.config.mjs`, see [eslint.config.mjs](../te
 ```js
 import { defineConfig } from "eslint/config";
 import tseslint from "typescript-eslint";
-import raydakPluginPulumi from "@raydak/eslint-plugin-pulumi";
+import eslintPluginPulumi from "@raydak/eslint-plugin-pulumi";
 
 export default defineConfig(
   {
     languageOptions: {
-      // configure the parser explicitly or e.g. by using the plugin, see below
+      // configure the parser explicitly
       parser: tseslint.parser,
       // required for pulumi eslint rules as it requires type information
       parserOptions: {
@@ -55,6 +55,6 @@ export default defineConfig(
       },
     },
   },
-  raydakPluginPulumi.configs.recommended,
+  eslintPluginPulumi.configs.recommended,
 );
 ```
