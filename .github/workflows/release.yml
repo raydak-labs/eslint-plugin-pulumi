@@ -7,10 +7,9 @@ on:
     tags:
       - "v*.*.*"
 
-# required for trusted publishing to NPM, see https://docs.npmjs.com/trusted-publishers
 permissions:
-  id-token: write
-  contents: read
+  id-token: write # required for trusted publishing to NPM, see https://docs.npmjs.com/trusted-publishers
+  contents: write # required for creating releases and tags
 
 jobs:
   release:
