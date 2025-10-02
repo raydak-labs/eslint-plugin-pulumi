@@ -1,5 +1,9 @@
 # Pulumi ESLint Plugin
 
+[![npm version](https://img.shields.io/npm/v/@raydak/eslint-plugin-pulumi)](https://www.npmjs.com/package/@raydak/eslint-plugin-pulumi)
+[![license](https://img.shields.io/npm/l/@raydak/eslint-plugin-pulumi)](LICENSE)
+[![build status](https://github.com/raydak-labs/eslint-plugin-pulumi/actions/workflows/ci.yml/badge.svg)](https://github.com/raydak-labs/eslint-plugin-pulumi/actions)
+
 ESLint plugin for Pulumi projects using TypeScript to enforce best practices and coding standards.
 
 This repository is derived from [pulumi/eslint-plugin-pulumi](https://github.com/pulumi/eslint-plugin-pulumi) which is not really maintained.
@@ -33,7 +37,7 @@ npm install -D @raydak/eslint-plugin-pulumi eslint typescript-eslint
 
 This plugin requires ESLint v9.0.0 or later using the flat configuration.
 
-Configure ESLint by adding an `eslint.config.mjs`, see [eslint.config.mjs](./test-playground/eslint.config.mjs) for an example:
+Configure ESLint by adding an `eslint.config.mjs`, see [eslint.config.mjs](../test-playground/eslint.config.mjs) for an example:
 
 ```js
 import { defineConfig } from "eslint/config";
