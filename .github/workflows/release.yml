@@ -8,13 +8,17 @@ on:
       - "v*.*.*"
 
 permissions:
-  id-token: write # required for trusted publishing to NPM, see https://docs.npmjs.com/trusted-publishers
-  contents: write # required for creating releases and tags
+  contents: read
 
 jobs:
   release:
     runs-on: ubuntu-latest
     environment: release
+    permissions:
+      contents: write # to be able to publish a GitHub release
+      id-token: write # to enable use of OIDC for trusted publishing and npm provenance, see https://docs.npmjs.com/trusted-publishers
+      issues: write # to be able to comment on released issues
+      pull-requests: write # to be able to comment on released pull requests
     steps:
       - uses: actions/checkout@08c6903cd8c0fde910a37f88322edcfb5dd907a8 # v5
 
@@ -32,6 +36,9 @@ jobs:
 
       - name: Build plugin
         run: pnpm --filter eslint-plugin-pulumi build
+
+      - name: Verify provenance attestations and registry signatures
+        run: pnpm audit signatures
 
       - name: Semantic Release
         env:
