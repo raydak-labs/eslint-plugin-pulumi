@@ -7,7 +7,10 @@ export default {
     [
       "@semantic-release/commit-analyzer",
       {
-        releaseRules: [{ type: "docs", scope: "README", release: "patch" }],
+        releaseRules: [
+          { type: "docs", scope: "README", release: "patch" },
+          { type: "refactor", release: "patch" }, // release for dependency updates which are refactors
+        ],
       },
     ],
     [
