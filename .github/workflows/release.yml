@@ -29,7 +29,8 @@ jobs:
       - uses: actions/setup-node@2028fbc5c25fe9cf00d9f06a71cc4710d4507903 # v6
         with:
           cache: pnpm
-          node-version: lts/*
+          node-version: 24 # required for trusted publishing, node 22 is not working
+          # node-version: lts/* # use this when node 24 is LTS
 
       - run: pnpm install --frozen-lockfile
 
