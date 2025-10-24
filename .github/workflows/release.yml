@@ -38,7 +38,8 @@ jobs:
         run: pnpm --filter eslint-plugin-pulumi build
 
       - name: Verify provenance attestations and registry signatures
-        run: pnpm audit signatures
+        # pnpm doesn't support it yet: https://github.com/pnpm/pnpm/issues/7909
+        run: npm audit signatures
 
       - name: Semantic Release
         env:
