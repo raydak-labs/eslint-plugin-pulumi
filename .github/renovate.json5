@@ -25,6 +25,14 @@
       matchDepTypes: ["dependencies"],
       semanticCommitType: "refactor",
     },
+    // semantic-release@25 / release-notes-generator@14 still ship
+    // conventional-changelog-writer@8; preset v10 requires writer@9.
+    // Hold major until https://github.com/semantic-release/release-notes-generator/issues/1027
+    {
+      matchPackageNames: ["conventional-changelog-conventionalcommits"],
+      matchUpdateTypes: ["major"],
+      enabled: false,
+    },
   ],
   minimumReleaseAge: "7 days",
 }
