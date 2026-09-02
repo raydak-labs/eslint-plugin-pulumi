@@ -1,3 +1,7 @@
 packages:
   - eslint-plugin-pulumi
   - test-playground
+
+allowBuilds:
+  esbuild: true
+  protobufjs: true
