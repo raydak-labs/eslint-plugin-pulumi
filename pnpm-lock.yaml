@@ -34,8 +34,8 @@ importers:
         specifier: 3.259.0
         version: 3.259.0(supports-color@7.2.0)(typescript@5.9.3)
       '@tsconfig/node-lts':
-        specifier: 22.0.4
-        version: 22.0.4
+        specifier: 24.0.1
+        version: 24.0.1
       '@types/node':
         specifier: 24.13.3
         version: 24.13.3
@@ -74,8 +74,8 @@ importers:
         specifier: workspace:*
         version: link:../eslint-plugin-pulumi
       '@tsconfig/node-lts':
-        specifier: 22.0.4
-        version: 22.0.4
+        specifier: 24.0.1
+        version: 24.0.1
       eslint:
         specifier: 9.39.5
         version: 9.39.5(jiti@2.6.1)(supports-color@7.2.0)
@@ -1159,8 +1159,8 @@ packages:
     resolution: {integrity: sha512-4BAffykYOgO+5nzBWYwE3W90sBgLJoUPRWWcL8wlyiM8IB8ipJz3UMJ9KXQd1RKQXpKp8Tutn80HZtWsu2u76w==}
     engines: {node: '>=10'}
 
-  '@tsconfig/node-lts@22.0.4':
-    resolution: {integrity: sha512-5eAeCX6l/EYe6H2UAw5nBgjfAgdlsR+lSp8YNNGwz+ixoi7JfJ5bOQvsiEhxGm5bOZFVF+cJSIj4tanpCCRMIw==}
+  '@tsconfig/node-lts@24.0.1':
+    resolution: {integrity: sha512-xo+1KtV5zVb90fyyeglG1n5cqg3cQXLlCkEpLptYlZUNk28xmwhuD5GmxoXwmrVtUTvaMyclun9kAd0TK7H+Pg==}
 
   '@tufjs/canonical-json@2.0.0':
     resolution: {integrity: sha512-yVtV8zsdo8qFHe+/3kw81dSLyF7D576A5cCFCi4X7B39tWT7SekaEFUnvnWJHz+9qO7qJTah1JbrDjWKqFtdWA==}
@@ -5130,7 +5130,7 @@ snapshots:
     dependencies:
       defer-to-connect: 2.0.1
 
-  '@tsconfig/node-lts@22.0.4': {}
+  '@tsconfig/node-lts@24.0.1': {}
 
   '@tufjs/canonical-json@2.0.0': {}
 
