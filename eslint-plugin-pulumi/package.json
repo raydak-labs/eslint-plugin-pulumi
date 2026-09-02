@@ -18,16 +18,16 @@
     "typescript": ">=5.0.0"
   },
   "devDependencies": {
-    "@eslint/js": "9.37.0",
-    "@pulumi/pulumi": "3.203.0",
-    "@tsconfig/node-lts": "22.0.2",
-    "@types/node": "24.8.1",
-    "@typescript-eslint/rule-tester": "8.46.1",
-    "eslint-plugin-eslint-plugin": "7.0.0",
-    "eslint-plugin-n": "17.23.1",
+    "@eslint/js": "9.39.5",
+    "@pulumi/pulumi": "3.259.0",
+    "@tsconfig/node-lts": "22.0.4",
+    "@types/node": "24.13.3",
+    "@typescript-eslint/rule-tester": "8.68.0",
+    "eslint-plugin-eslint-plugin": "7.6.2",
+    "eslint-plugin-n": "17.24.0",
     "tsdown": "0.22.14",
-    "typescript-eslint": "8.46.1",
-    "vitest": "3.2.4"
+    "typescript-eslint": "8.68.0",
+    "vitest": "3.2.7"
   },
   "main": "./dist/index.cjs",
   "module": "./dist/index.js",
