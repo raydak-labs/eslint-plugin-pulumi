@@ -18,7 +18,7 @@
     "typescript": ">=5.0.0"
   },
   "devDependencies": {
-    "@eslint/js": "9.39.5",
+    "@eslint/js": "10.0.1",
     "@pulumi/pulumi": "3.259.0",
     "@tsconfig/node-lts": "24.0.1",
     "@types/node": "24.13.3",
