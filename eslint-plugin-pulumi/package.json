@@ -24,7 +24,7 @@
     "@types/node": "24.13.3",
     "@typescript-eslint/rule-tester": "8.68.0",
     "eslint-plugin-eslint-plugin": "7.6.2",
-    "eslint-plugin-n": "17.24.0",
+    "eslint-plugin-n": "18.3.0",
     "tsdown": "0.22.14",
     "typescript-eslint": "8.68.0",
     "vitest": "3.2.7"
