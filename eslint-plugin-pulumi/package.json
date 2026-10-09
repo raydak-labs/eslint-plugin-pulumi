@@ -11,7 +11,7 @@
   "author": "raydak",
   "license": "MIT",
   "dependencies": {
-    "@typescript-eslint/utils": "8.68.0"
+    "@typescript-eslint/utils": "8.71.0"
   },
   "peerDependencies": {
     "eslint": ">=9.0.0",
