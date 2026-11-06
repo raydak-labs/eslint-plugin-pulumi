@@ -21,7 +21,7 @@
     "@eslint/js": "10.0.1",
     "@pulumi/pulumi": "3.273.0",
     "@tsconfig/node-lts": "24.0.1",
-    "@types/node": "24.19.2",
+    "@types/node": "26.6.6",
     "@typescript-eslint/rule-tester": "8.72.1",
     "eslint-plugin-eslint-plugin": "7.6.2",
     "eslint-plugin-n": "18.5.0",
